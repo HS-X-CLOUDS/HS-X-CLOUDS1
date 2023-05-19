@@ -244,7 +244,7 @@ def get_readable_message():
                     msg += f" | <b>ᴛɪᴍᴇ: </b>{download.seeding_time()}"
                     msg += f"\n<b>ᴇʟᴀᴘsᴇᴅ: </b>{get_readable_time(time() - download.message.date.timestamp())}"
                     msg += f"\n<b>ᴄᴀɴᴄᴇʟ</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-             else:
+            else:
                 if EMOJI_THEME is True:
                     msg += f"\n<b>ᴇɴɢɪɴᴇ:</b> {download.eng()}"
                     msg += f"\n<b>sɪᴢᴇ: </b>{download.size()}"
