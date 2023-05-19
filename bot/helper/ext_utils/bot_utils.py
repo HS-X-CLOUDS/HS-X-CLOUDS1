@@ -30,16 +30,16 @@ PAGES = 0
 
 class MirrorStatus:
     if EMOJI_THEME is True:
-        STATUS_UPLOADING = "📤 ᴜᴘʟᴏᴅᴇ"
-        STATUS_DOWNLOADING = "📥 ᴅᴏᴡɴʟᴏᴀᴅ"
-        STATUS_CLONING = "♻️ ᴄʟᴏɴᴇ"
-        STATUS_WAITING = "💤 ǫᴜᴇᴜᴇ"
-        STATUS_PAUSED = "⛔️ ᴘᴀᴜsᴇ"
-        STATUS_ARCHIVING = "🔐 ᴀʀᴄʜɪᴠᴇ"
-        STATUS_EXTRACTING = "📂 ᴇxᴛʀᴀᴄᴛ"
-        STATUS_SPLITTING = "✂️ sᴘʟɪᴛ"
-        STATUS_CHECKING = "📝 ᴄʜᴇᴄᴋ-ᴜᴘ"
-        STATUS_SEEDING = "🌧 sᴇᴇᴅ"
+        STATUS_UPLOADING = "ᴜᴘʟᴏᴅᴇ"
+        STATUS_DOWNLOADING = "ᴅᴏᴡɴʟᴏᴀᴅ"
+        STATUS_CLONING = "ᴄʟᴏɴᴇ"
+        STATUS_WAITING = "ǫᴜᴇᴜᴇ"
+        STATUS_PAUSED = "ᴘᴀᴜsᴇ"
+        STATUS_ARCHIVING = "ᴀʀᴄʜɪᴠᴇ"
+        STATUS_EXTRACTING = "ᴇxᴛʀᴀᴄᴛ"
+        STATUS_SPLITTING = "sᴘʟɪᴛ"
+        STATUS_CHECKING = "ᴄʜᴇᴄᴋ-ᴜᴘ"
+        STATUS_SEEDING = "sᴇᴇᴅ"
     else:
         STATUS_UPLOADING = "ᴜᴘʟᴏᴅᴇ"
         STATUS_DOWNLOADING = "ᴅᴏᴡɴʟᴏᴀᴅ"
@@ -177,7 +177,7 @@ def get_readable_message():
                 globals()['COUNT'] -= STATUS_LIMIT
                 globals()['PAGE_NO'] -= 1
         for index, download in enumerate(list(download_dict.values())[COUNT:], start=1):
-            msg += f"<b>╭ <a href='{download.message.link}'>{download.status()}</a>: </b>"
+            msg += f"<b><a href='{download.message.link}'>{download.status()}</a>: </b>"
             msg += f"<code>{escape(str(download.name()))}</code>"
             if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_SPLITTING]:
                 if EMOJI_THEME is True:
@@ -251,7 +251,7 @@ def get_readable_message():
                 else:
                     msg += f"\n<b>ᴇɴɢɪɴᴇ:</b> {download.eng()}"
                     msg += f"\n<b>sɪᴢᴇ: </b>{download.size()}"
-            msg += f"\n<b>________________ᴍs-x-ᴄʟᴏᴜᴅ______________</b>"
+            msg += f"\n<b>___________ᴍs-x-ᴄʟᴏᴜᴅ____________</b>"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
