@@ -327,18 +327,18 @@ class MirrorLeechListener:
             pmwarn = ''
         if MIRROR_LOGS and self.message.chat.type != 'private':
             if EMOJI_THEME is True:
-                logwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ</a> </b>\n"
+                logwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">Mirror Log channel</a> </b>\n"
             else:
-                logwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ</a> </b>\n"
+                logwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">Mirror Log channel</a> </b>\n"
         elif self.message.chat.type == 'private':
             logwarn = ''
         else:
             logwarn = ''
         if LEECH_LOG and self.message.chat.type != 'private':
             if EMOJI_THEME is True:
-                logleechwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴɴᴇʟ</a> </b>\n"
+                logleechwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">Leech Log channel</a> </b>\n"
             else:
-                logleechwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴɴᴇʟ</a> </b>\n"
+                logleechwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">Leech Log channel</a> </b>\n"
         elif self.message.chat.type == 'private':
             logleechwarn = ''
         else:
