@@ -18,12 +18,12 @@ def getleechinfo(from_user):
     name = from_user.full_name
     buttons = button_build.ButtonMaker()
     thumbpath = f"Thumbnails/{user_id}.jpg"
-    prefix = PRE_DICT.get(user_id, "Not Exists")
-    suffix = SUF_DICT.get(user_id, "Not Exists")
+    prefix = PRE_DICT.get(user_id, "ɴᴏᴛ ᴇxɪsᴛs")
+    suffix = SUF_DICT.get(user_id, "ɴᴏᴛ ᴇxɪsᴛs")
     caption = CAP_DICT.get(user_id, "ɴᴏᴛ ᴇxɪsᴛs")
-    dumpid = LEECH_DICT.get(user_id, "Not Exists")
-    remname = REM_DICT.get(user_id, "Not Exists")
-    cfont = CFONT_DICT.get(user_id, ["Not Exists"])[0]
+    dumpid = LEECH_DICT.get(user_id, "ɴᴏᴛ ᴇxɪsᴛs")
+    remname = REM_DICT.get(user_id, "ɴᴏᴛ ᴇxɪsᴛs")
+    cfont = CFONT_DICT.get(user_id, ["ɴᴏᴛ ᴇxɪsᴛs"])[0]
     if (
         user_id in AS_DOC_USERS
         or user_id not in AS_MEDIA_USERS
@@ -43,17 +43,17 @@ def getleechinfo(from_user):
         buttons.sbutton("👀 ᴛʜᴜᴍʙɴᴀɪʟ", f"leechset {user_id} showthumb")
     else:
         thumbmsg = "ɴᴏᴛ ᴇxɪsᴛs"
-    if prefix != "Not Exists":
+    if prefix != "ɴᴏᴛ ᴇxɪsᴛs":
         buttons.sbutton("✘ ᴘʀᴇɴᴀᴍᴇ", f"leechset {user_id} prename")
-    if suffix != "Not Exists":
+    if suffix != "ɴᴏᴛ ᴇxɪsᴛs":
         buttons.sbutton("✘ sᴜғғɪx", f"leechset {user_id} suffix")
     if caption != "ɴᴏᴛ ᴇxɪsᴛs": 
         buttons.sbutton("✘ ᴄᴀᴘᴛᴏɪɴ", f"leechset {user_id} cap")
-    if dumpid != "Not Exists":
+    if dumpid != "ɴᴏᴛ ᴇxɪsᴛs":
         buttons.sbutton("✘ ᴅᴜᴍᴘ-ɪᴅ", f"leechset {user_id} dump")
-    if remname != "Not Exists": 
+    if remname != "ɴᴏᴛ ᴇxɪsᴛs": 
         buttons.sbutton("✘ ʀᴇᴍɴᴀᴍᴇ", f"leechset {user_id} rem")
-    if cfont != "Not Exists": 
+    if cfont != "ɴᴏᴛ ᴇxɪsᴛs": 
         buttons.sbutton("✘ ᴄᴀᴘғᴏɴᴛ", f"leechset {user_id} cfont")
 
     button = buttons.build_menu(2)
