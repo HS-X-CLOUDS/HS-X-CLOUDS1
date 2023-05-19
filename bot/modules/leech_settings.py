@@ -43,17 +43,17 @@ def getleechinfo(from_user):
         buttons.sbutton("sʜᴏᴡ-ᴛʜᴜᴍɴᴀɪʟ", f"leechset {user_id} showthumb")
     else:
         thumbmsg = "ɴᴏᴛ ᴇxɪsᴛs"
-    if prefix != "ɴᴏᴛ ᴇxɪsᴛs":
+    if prefix != "Not Exists":
         buttons.sbutton("ᴅᴇʟᴇ-ᴘʀᴇɴᴀᴍᴇ", f"leechset {user_id} prename")
-    if suffix != "ɴᴏᴛ ᴇxɪsᴛs":
+    if suffix != "Not Exists":
         buttons.sbutton("ᴅᴇʟᴇ-sᴜғғɪx", f"leechset {user_id} suffix")
-    if caption != "ɴᴏᴛ ᴇxɪsᴛs": 
+    if caption != "Not Exists": 
         buttons.sbutton("ᴅᴇʟᴇ-ᴄᴀᴘᴛᴏɪɴ", f"leechset {user_id} cap")
-    if dumpid != "ɴᴏᴛ ᴇxɪsᴛs":
+    if dumpid != "Not Exists":
         buttons.sbutton("ᴅᴇʟᴇ-ᴅᴜᴍᴘ-ɪᴅ", f"leechset {user_id} dump")
-    if remname != "ɴᴏᴛ ᴇxɪsᴛs": 
+    if remname != "Not Exists": 
         buttons.sbutton("ᴅᴇʟᴇ-ʀᴇᴍɴᴀᴍᴇ", f"leechset {user_id} rem")
-    if cfont != "ɴᴏᴛ ᴇxɪsᴛs": 
+    if cfont != "Not Exists": 
         buttons.sbutton("ᴅᴇʟᴇ ᴄᴀᴘғᴏɴᴛ", f"leechset {user_id} cfont")
 
     button = buttons.build_menu(2)
