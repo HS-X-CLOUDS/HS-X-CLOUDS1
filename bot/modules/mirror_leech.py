@@ -12,7 +12,7 @@ from telegram.ext import CommandHandler
 from telegram import ParseMode, InlineKeyboardButton
 
 from bot import *
-from bot.modules.verify import verify_user, check_token, check_verification, get_token
+from .verify import verify_user, check_token, check_verification, get_token
 from bot.helper.ext_utils.bot_utils import is_url, is_magnet, is_gdtot_link, is_mega_link, is_gdrive_link, is_unified_link, is_udrive_link, get_content_type, get_readable_time, get_user_task
 from bot.helper.ext_utils.timegap import timegap_check
 from bot.helper.ext_utils.exceptions import DirectDownloadLinkException, NotSupportedExtractionArchive
@@ -31,11 +31,11 @@ from bot.helper.telegram_helper.button_build import ButtonMaker
 from .listener import MirrorLeechListener
 
 
-def _mirror_leech(bot, message, isZip=False, extract=False, isQbit=False, isLeech=False):
+def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLeech=False)
     buttons = ButtonMaker()
 
     if VERIFY:
-		await check_verification("member", "creator", "administrator", "supergroup")and VERIFY == True:
+	 await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
                 ]]
