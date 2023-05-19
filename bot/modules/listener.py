@@ -372,9 +372,9 @@ class MirrorLeechListener:
                 reply_to.delete()
 
         if EMOJI_THEME is True:
-            msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>├📐 Size: </b>{size}"
+            msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>sɪᴢᴇ : </b>{size}"
         else:
-            msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>├ Size: </b>{size}"
+            msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>sɪᴢᴇ : </b>{size}"
 
 
         if self.isLeech:
@@ -386,13 +386,13 @@ class MirrorLeechListener:
                             title=f"{TITLE_NAME} Source Link",
                             content=mesg,
                         )["path"]
-                        buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", f"https://graph.org/{link}")
+                        buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", f"https://graph.org/{link}")
                     elif is_url(mesg):
                         source_link = mesg
                         if source_link.startswith(("|", "pswd: ")):
                             pass
                         else:
-                            buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", source_link)
+                            buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", source_link)
                     else:
                         pass
                 except Exception:
@@ -407,9 +407,9 @@ class MirrorLeechListener:
                                     title=f"{TITLE_NAME} Source Link",
                                     content=source_link,
                                 )["path"]
-                                buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", f"https://graph.org/{link}")
+                                buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", f"https://graph.org/{link}")
                             else:
-                                buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", source_link)
+                                buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", source_link)
                     except Exception:
                         pass
             else:
@@ -418,7 +418,7 @@ class MirrorLeechListener:
                 bot_d = bot.get_me()	
                 b_uname = bot_d.username	
                 botstart = f"http://t.me/{b_uname}"	
-                buttons.buildbutton("ᴠɪᴇᴡ ғɪʟᴇ ɪɴ ᴘᴍ", f"{botstart}")
+                buttons.buildbutton("ᴠɪᴇᴡ ᴘᴍ", f"{botstart}")
             elif self.message.chat.type == 'private':
                 botstart = ''
             else:
@@ -535,13 +535,13 @@ class MirrorLeechListener:
                                     title=f"{TITLE_NAME} Source Link",
                                     content=mesg,
                                 )["path"]
-                                buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", f"https://graph.org/{link}")
+                                buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", f"https://graph.org/{link}")
                             elif is_url(mesg):
                                 source_link = mesg
                                 if source_link.startswith(("|", "pswd: ")):
                                     pass
                                 else:
-                                    buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", source_link)
+                                    buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", source_link)
                             else:
                                 pass
                         except Exception:
@@ -556,9 +556,9 @@ class MirrorLeechListener:
                                             title=f"{TITLE_NAME} Source Link",
                                             content=source_link,
                                         )["path"]
-                                        buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", f"https://graph.org/{link}")
+                                        buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", f"https://graph.org/{link}")
                                     else:
-                                        buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", source_link)
+                                        buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", source_link)
                             except Exception:
                                 pass
                     else:
@@ -569,7 +569,7 @@ class MirrorLeechListener:
                         bot_d = bot.get_me()	
                         b_uname = bot_d.username	
                         botstart = f"http://t.me/{b_uname}"	
-                        buttons.buildbutton("ᴠɪᴇᴡ ғɪʟᴇs ɪɴ ᴘᴍ", f"{botstart}")
+                        buttons.buildbutton("ᴠɪᴇᴡ ᴘᴍ", f"{botstart}")
                     elif self.message.chat.type == 'private':
                         botstart = ''
                     else:
