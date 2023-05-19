@@ -47,7 +47,7 @@ def getleechinfo(from_user):
         buttons.sbutton("✘ ᴘʀᴇɴᴀᴍᴇ", f"leechset {user_id} prename")
     if suffix != "Not Exists":
         buttons.sbutton("✘ sᴜғғɪx", f"leechset {user_id} suffix")
-    if caption != "Not Exists": 
+    if caption != "ɴᴏᴛ ᴇxɪsᴛs": 
         buttons.sbutton("✘ ᴄᴀᴘᴛᴏɪɴ", f"leechset {user_id} cap")
     if dumpid != "Not Exists":
         buttons.sbutton("✘ ᴅᴜᴍᴘ-ɪᴅ", f"leechset {user_id} dump")
