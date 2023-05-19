@@ -31,7 +31,7 @@ from bot.helper.telegram_helper.button_build import ButtonMaker
 from .listener import MirrorLeechListener
 
 
-def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLeech=False)
+def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLeech=False):
     buttons = ButtonMaker()
 	
 	elif data.split("-", 1)[0] == "verify":
