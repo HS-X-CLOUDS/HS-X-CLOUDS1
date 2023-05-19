@@ -275,11 +275,11 @@ class MirrorLeechListener:
             file_ = _newExtFileName
 
         if EMOJI_THEME is True:
-            slmsg = f"ɴᴀᴍᴇ : <{NAME_FONT}>{file_}</{NAME_FONT}>\n\n"
+            slmsg = f"ɴᴀᴍᴇ : <b>{file_}</b>\n\n"
             slmsg += f"sɪᴢᴇ : {size}\n\n"
             slmsg += f"ᴀᴅᴅᴇᴅ ʙʏ : {self.tag} | <code>{self.user_id}</code>\n\n"
         else:
-            slmsg = f"ɴᴀᴍᴇ : <{NAME_FONT}>{file_}</{NAME_FONT}>\n\n"
+            slmsg = f"ɴᴀᴍᴇ : <b>{file_}</b>\n\n"
             slmsg += f"sɪᴢᴇ : {size}\n\n"
             slmsg += f"ᴀᴅᴅᴇᴅ ʙʏ: {self.tag} | <code>{self.user_id}</code>\n\n"
         if LINK_LOGS:
@@ -327,18 +327,18 @@ class MirrorLeechListener:
             pmwarn = ''
         if MIRROR_LOGS and self.message.chat.type != 'private':
             if EMOJI_THEME is True:
-                logwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">Mirror Log channel</a> </b>\n"
+                logwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ</a> </b>\n"
             else:
-                logwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">Mirror Log channel</a> </b>\n"
+                logwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ</a> </b>\n"
         elif self.message.chat.type == 'private':
             logwarn = ''
         else:
             logwarn = ''
         if LEECH_LOG and self.message.chat.type != 'private':
             if EMOJI_THEME is True:
-                logleechwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">Leech Log channel</a> </b>\n"
+                logleechwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴɴᴇʟ</a> </b>\n"
             else:
-                logleechwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">Leech Log channel</a> </b>\n"
+                logleechwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴɴᴇʟ</a> </b>\n"
         elif self.message.chat.type == 'private':
             logleechwarn = ''
         else:
@@ -349,9 +349,9 @@ class MirrorLeechListener:
 
         if BOT_PM and FORCE_BOT_PM and not self.isPrivate:
             if EMOJI_THEME is True:
-                msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n"
+                msg = f"<b>ɴᴀᴍᴇ : <b>{file_}</b>\n"
             else:
-                msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n"
+                msg = f"<b>ɴᴀᴍᴇ : <b>{file_}</b>\n"
             botpm = f"<b>\nʜᴇʏ {self.tag}!, ɪ ʜᴀᴠᴇ sᴇɴᴅ ʏᴏᴜʀ sᴛᴜғғ ɪɴ ᴘᴍ.</b>\n"
             buttons = ButtonMaker()
             b_uname = bot.get_me().username
@@ -372,9 +372,9 @@ class MirrorLeechListener:
                 reply_to.delete()
 
         if EMOJI_THEME is True:
-            msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>sɪᴢᴇ : </b>{size}"
+            msg = f"<b>ɴᴀᴍᴇ : <b>{file_}</b>\n<b>sɪᴢᴇ : </b>{size}"
         else:
-            msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>sɪᴢᴇ : </b>{size}"
+            msg = f"<b>ɴᴀᴍᴇ : <b>{file_}</b>\n<b>sɪᴢᴇ : </b>{size}"
 
 
         if self.isLeech:
