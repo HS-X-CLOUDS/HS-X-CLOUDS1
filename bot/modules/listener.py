@@ -327,18 +327,18 @@ class MirrorLeechListener:
             pmwarn = ''
         if MIRROR_LOGS and self.message.chat.type != 'private':
             if EMOJI_THEME is True:
-                logwarn = f"<b>⚠️ I have sent files in Mirror Log Channel. Join <a href=\"{MIRROR_LOG_URL}\">Mirror Log channel</a> </b>\n"
+                logwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">Mirror Log channel</a> </b>\n"
             else:
-                logwarn = f"<b>I have sent files in Mirror Log Channel. Join <a href=\"{MIRROR_LOG_URL}\">Mirror Log channel</a> </b>\n"
+                logwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ᴍɪʀʀᴏʀ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{MIRROR_LOG_URL}\">Mirror Log channel</a> </b>\n"
         elif self.message.chat.type == 'private':
             logwarn = ''
         else:
             logwarn = ''
         if LEECH_LOG and self.message.chat.type != 'private':
             if EMOJI_THEME is True:
-                logleechwarn = f"<b>⚠️ I have sent files in Leech Log Channel. Join <a href=\"{LEECH_LOG_URL}\">Leech Log channel</a> </b>\n"
+                logleechwarn = f"<b>⚠️ ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">Leech Log channel</a> </b>\n"
             else:
-                logleechwarn = f"<b>I have sent files in Leech Log Channel. Join <a href=\"{LEECH_LOG_URL}\">Leech Log channel</a> </b>\n"
+                logleechwarn = f"<b>ғɪʟᴇs sᴇɴᴅɪɴᴅ ʟᴇᴇᴄʜ ʟᴏɢ ᴄʜᴀɴᴇᴇʟ\n ᴊᴏɪɴ : <a href=\"{LEECH_LOG_URL}\">Leech Log channel</a> </b>\n"
         elif self.message.chat.type == 'private':
             logleechwarn = ''
         else:
@@ -349,14 +349,14 @@ class MirrorLeechListener:
 
         if BOT_PM and FORCE_BOT_PM and not self.isPrivate:
             if EMOJI_THEME is True:
-                msg = f"<b>🗂️ Name: </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n"
+                msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n"
             else:
-                msg = f"<b>Name: </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n"
-            botpm = f"<b>\nHey {self.tag}!, I have sent your stuff in PM.</b>\n"
+                msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n"
+            botpm = f"<b>\nʜᴇʏ {self.tag}!, ɪ ʜᴀᴠᴇ sᴇɴᴅ ʏᴏᴜʀ sᴛᴜғғ ɪɴ ᴘᴍ.</b>\n"
             buttons = ButtonMaker()
             b_uname = bot.get_me().username
             botstart = f"http://t.me/{b_uname}"
-            buttons.buildbutton("View links in PM", f"{botstart}")
+            buttons.buildbutton("ᴠɪᴇᴡ ʟɪɴᴋ ɪɴ ᴘᴍ", f"{botstart}")
 
             if PICS:
                 sendPhoto(msg + botpm, self.bot, self.message, choice(PICS), buttons.build_menu(2))
@@ -372,9 +372,9 @@ class MirrorLeechListener:
                 reply_to.delete()
 
         if EMOJI_THEME is True:
-            msg = f"<b>╭🗂️ Name: </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>├📐 Size: </b>{size}"
+            msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>├📐 Size: </b>{size}"
         else:
-            msg = f"<b>╭ Name: </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>├ Size: </b>{size}"
+            msg = f"<b>ɴᴀᴍᴇ : </b><{NAME_FONT}>{file_}</{NAME_FONT}>\n<b>├ Size: </b>{size}"
 
 
         if self.isLeech:
@@ -386,13 +386,13 @@ class MirrorLeechListener:
                             title=f"{TITLE_NAME} Source Link",
                             content=mesg,
                         )["path"]
-                        buttons.buildbutton(f"🔗 Source Link", f"https://graph.org/{link}")
+                        buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", f"https://graph.org/{link}")
                     elif is_url(mesg):
                         source_link = mesg
                         if source_link.startswith(("|", "pswd: ")):
                             pass
                         else:
-                            buttons.buildbutton(f"🔗 Source Link", source_link)
+                            buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", source_link)
                     else:
                         pass
                 except Exception:
@@ -407,9 +407,9 @@ class MirrorLeechListener:
                                     title=f"{TITLE_NAME} Source Link",
                                     content=source_link,
                                 )["path"]
-                                buttons.buildbutton(f"🔗 Source Link", f"https://graph.org/{link}")
+                                buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", f"https://graph.org/{link}")
                             else:
-                                buttons.buildbutton(f"🔗 Source Link", source_link)
+                                buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", source_link)
                     except Exception:
                         pass
             else:
@@ -418,27 +418,27 @@ class MirrorLeechListener:
                 bot_d = bot.get_me()	
                 b_uname = bot_d.username	
                 botstart = f"http://t.me/{b_uname}"	
-                buttons.buildbutton("View file in PM", f"{botstart}")
+                buttons.buildbutton("ᴠɪᴇᴡ ғɪʟᴇ ɪɴ ᴘᴍ", f"{botstart}")
             elif self.message.chat.type == 'private':
                 botstart = ''
             else:
                 botstart = ''
 
             if EMOJI_THEME is True:
-                msg += f'\n<b>├📚 Total Files: </b>{folders}'
+                msg += f'\n<b>ᴛᴏᴛᴀʟ ғɪʟᴇs : </b>{folders}'
             else:
-                msg += f'\n<b>├ Total Files: </b>{folders}'
+                msg += f'\n<b>ᴛᴏᴛᴀʟ ғɪʟᴇs : </b>{folders}'
             if typ != 0:
                 if EMOJI_THEME is True:
-                    msg += f'\n<b>├💀 Corrupted Files: </b>{typ}'
+                    msg += f'\n<b>ᴄᴏʀʀᴜᴘᴛᴇᴅ ғɪʟᴇs : </b>{typ}'
                 else:
-                    msg += f'\n<b>├ Corrupted Files: </b>{typ}'
+                    msg += f'\n<b>ᴄᴏʀʀᴜᴘᴛᴇᴅ ғɪʟᴇs : </b>{typ}'
             if EMOJI_THEME is True:
-                msg += f'\n<b>├⌛ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-                msg += f'\n<b>╰👤 #Leech_by: </b>{self.tag}\n\n'
+                msg += f'\n<b>ɪᴛ ᴛᴏᴏᴋs :</b> {get_readable_time(time() - self.message.date.timestamp())}'
+                msg += f'\n<b>ʟᴇᴇᴄʜ ʙʏ : </b>{self.tag}\n\n'
             else: 
-                msg += f'\n<b>├ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-                msg += f'\n<b>╰ #Leech_by: </b>{self.tag}\n\n'
+                msg += f'\n<b>ɪᴛ ᴛᴏᴏᴋs :</b> {get_readable_time(time() - self.message.date.timestamp())}'
+                msg += f'\n<b>ʟᴇᴇᴄʜ ʙʏ : </b>{self.tag}\n\n'
 
 
 
@@ -490,28 +490,28 @@ class MirrorLeechListener:
                 return			   			  
         else:
             if EMOJI_THEME is True:
-                msg += f'\n<b>├📦 Type: </b>{typ}'
+                msg += f'\n<b>ᴛʏᴘᴇ : </b>{typ}'
             else:
-                msg += f'\n<b>├ Type: </b>{typ}'
+                msg += f'\n<b>ᴛʏᴘᴇ : </b>{typ}'
             if typ == "Folder":
                 if EMOJI_THEME is True:
-                    msg += f'\n<b>├🗃️ SubFolders: </b>{folders}'
-                    msg += f'\n<b>├🗂️ Files: </b>{files}'
+                    msg += f'\n<b>sᴜʙ-ғᴏʟᴅᴇʀ : </b>{folders}'
+                    msg += f'\n<b>ғɪʟᴇs : </b>{files}'
                 else:
-                    msg += f'\n<b>├ SubFolders: </b>{folders}'
-                    msg += f'\n<b>├ Files: </b>{files}'
+                    msg += f'\n<b>sᴜʙ-ғᴏʟᴅᴇʀ : </b>{folders}'
+                    msg += f'\n<b>ғɪʟᴇs : </b>{files}'
             if EMOJI_THEME is True:
-                msg += f'\n<b>├⌛ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-                msg += f'\n<b>╰👤 #Mirror_By: </b>{self.tag}\n\n'
+                msg += f'\n<b>ɪᴛ ᴛᴏᴏᴋs :</b> {get_readable_time(time() - self.message.date.timestamp())}'
+                msg += f'\n<b>ᴍɪʀʀᴏʀ ʙʏ : </b>{self.tag}\n\n'
             else:
-                msg += f'\n<b>├ It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-                msg += f'\n<b>╰ #Mirror_By: </b>{self.tag}\n\n' 
+                msg += f'\n<b>ɪᴛ ᴛᴏᴏᴋs :</b> {get_readable_time(time() - self.message.date.timestamp())}'
+                msg += f'\n<b>ᴍɪʀʀᴏʀ ʙʏ : </b>{self.tag}\n\n' 
             buttons = ButtonMaker()
             link = short_url(link)
             if DISABLE_DRIVE_LINK is True and self.message.chat.type != 'private':
                 pass
             else:
-                buttons.buildbutton("☁️ Drive Link", link)
+                buttons.buildbutton("⛈️ ᴅʀɪᴠᴇ ʟɪɴᴋ ⛈️", link)
             LOGGER.info(f'Done Uploading {name}')
             if INDEX_URL is not None:
                 url_path = rutils.quote(f'{name}')
@@ -519,14 +519,14 @@ class MirrorLeechListener:
                 if typ == "Folder":
                     share_url += '/'
                     share_url = short_url(share_url)
-                    buttons.buildbutton("⚡ Index Link", share_url)
+                    buttons.buildbutton("⚡ ɪɴᴅᴇx ʟɪɴᴋ ⚡", share_url)
                 else:
                     share_url = short_url(share_url)
-                    buttons.buildbutton("⚡ Index Link", share_url)
+                    buttons.buildbutton("⚡ ɪɴᴅᴇx ʟɪɴᴋ ⚡", share_url)
                     if VIEW_LINK:
                         share_urls = f'{INDEX_URL}/{url_path}?a=view'
                         share_urls = short_url(share_urls)
-                        buttons.buildbutton("🌐 View Link", share_urls)
+                        buttons.buildbutton("🌧️ ᴠɪᴇᴡ ʟɪɴᴋ 🌧️", share_urls)
                     if SOURCE_LINK is True:
                         try:
                             mesg = message_args[1]
@@ -535,13 +535,13 @@ class MirrorLeechListener:
                                     title=f"{TITLE_NAME} Source Link",
                                     content=mesg,
                                 )["path"]
-                                buttons.buildbutton(f"🔗 Source Link", f"https://graph.org/{link}")
+                                buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", f"https://graph.org/{link}")
                             elif is_url(mesg):
                                 source_link = mesg
                                 if source_link.startswith(("|", "pswd: ")):
                                     pass
                                 else:
-                                    buttons.buildbutton(f"🔗 Source Link", source_link)
+                                    buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", source_link)
                             else:
                                 pass
                         except Exception:
@@ -556,9 +556,9 @@ class MirrorLeechListener:
                                             title=f"{TITLE_NAME} Source Link",
                                             content=source_link,
                                         )["path"]
-                                        buttons.buildbutton(f"🔗 Source Link", f"https://graph.org/{link}")
+                                        buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", f"https://graph.org/{link}")
                                     else:
-                                        buttons.buildbutton(f"🔗 Source Link", source_link)
+                                        buttons.buildbutton(f"♻️ sᴏᴜʀᴄᴇ ʟɪɴᴋ ♻️", source_link)
                             except Exception:
                                 pass
                     else:
@@ -569,7 +569,7 @@ class MirrorLeechListener:
                         bot_d = bot.get_me()	
                         b_uname = bot_d.username	
                         botstart = f"http://t.me/{b_uname}"	
-                        buttons.buildbutton("View file in PM", f"{botstart}")
+                        buttons.buildbutton("ᴠɪᴇᴡ ғɪʟᴇs ɪɴ ᴘᴍ", f"{botstart}")
                     elif self.message.chat.type == 'private':
                         botstart = ''
                     else:
