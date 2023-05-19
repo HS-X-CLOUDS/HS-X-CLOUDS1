@@ -1,3 +1,15 @@
+mesg = message.text.split('\n')
+    message_args = mesg[0].split(maxsplit=1)
+    name_args = mesg[0].split('|', maxsplit=1)
+    is_gdtot = False
+    is_unified = False
+    is_udrive = False
+    index = 1
+    ratio = None
+    seed_time = None
+    select = False
+    seed = False
+    multi = 0
 if len(message_args) > 1:
         args = mesg[0].split(maxsplit=3)
         for x in args:
