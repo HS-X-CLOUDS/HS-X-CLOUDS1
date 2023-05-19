@@ -30,38 +30,38 @@ PAGES = 0
 
 class MirrorStatus:
     if EMOJI_THEME is True:
-        STATUS_UPLOADING = "📤 Upload"
-        STATUS_DOWNLOADING = "📥 Download"
-        STATUS_CLONING = "♻️ Clone"
-        STATUS_WAITING = "💤 Queue"
-        STATUS_PAUSED = "⛔️ Pause"
-        STATUS_ARCHIVING = "🔐 Archive"
-        STATUS_EXTRACTING = "📂 Extract"
-        STATUS_SPLITTING = "✂️ Split"
-        STATUS_CHECKING = "📝 CheckUp"
-        STATUS_SEEDING = "🌧 Seed"
+        STATUS_UPLOADING = "📤 ᴜᴘʟᴏᴅᴇ"
+        STATUS_DOWNLOADING = "📥 ᴅᴏᴡɴʟᴏᴀᴅ"
+        STATUS_CLONING = "♻️ ᴄʟᴏɴᴇ"
+        STATUS_WAITING = "💤 ǫᴜᴇᴜᴇ"
+        STATUS_PAUSED = "⛔️ ᴘᴀᴜsᴇ"
+        STATUS_ARCHIVING = "🔐 ᴀʀᴄʜɪᴠᴇ"
+        STATUS_EXTRACTING = "📂 ᴇxᴛʀᴀᴄᴛ"
+        STATUS_SPLITTING = "✂️ sᴘʟɪᴛ"
+        STATUS_CHECKING = "📝 ᴄʜᴇᴄᴋ-ᴜᴘ"
+        STATUS_SEEDING = "🌧 sᴇᴇᴅ"
     else:
-        STATUS_UPLOADING = "Upload"
-        STATUS_DOWNLOADING = "Download"
-        STATUS_CLONING = "Clone"
-        STATUS_WAITING = "Queue"
-        STATUS_PAUSED = "Pause"
-        STATUS_ARCHIVING = "Archive"
-        STATUS_EXTRACTING = "Extract"
-        STATUS_SPLITTING = "Split"
-        STATUS_CHECKING = "CheckUp"
-        STATUS_SEEDING = "Seed"
+        STATUS_UPLOADING = "ᴜᴘʟᴏᴅᴇ"
+        STATUS_DOWNLOADING = "ᴅᴏᴡɴʟᴏᴀᴅ"
+        STATUS_CLONING = "ᴄʟᴏɴᴇ"
+        STATUS_WAITING = "ǫᴜᴇᴜᴇ"
+        STATUS_PAUSED = "ᴘᴀᴜsᴇ"
+        STATUS_ARCHIVING = "ᴀʀᴄʜɪᴠᴇ"
+        STATUS_EXTRACTING = "ᴇxᴛʀᴀᴄᴛ"
+        STATUS_SPLITTING = "sᴘʟɪᴛ"
+        STATUS_CHECKING = "ᴄʜᴇᴄᴋ-ᴜᴘ"
+        STATUS_SEEDING = "sᴇᴇᴅ"
 
 class EngineStatus:
-    STATUS_ARIA = "Aria2c📶"
-    STATUS_GD = "Google Api♻️"
-    STATUS_MEGA = "MegaSDK⭕️"
-    STATUS_QB = "qBittorrent🦠"
-    STATUS_TG = "Pyrogram💥"
-    STATUS_YT = "YT-dlp🌟"
-    STATUS_EXT = "Extract | pExtract⚔️"
-    STATUS_SPLIT = "FFmpeg✂️"
-    STATUS_ZIP = "p7zip🛠"
+    STATUS_ARIA = "ᴀʀɪᴀ2ᴄ 📶"
+    STATUS_GD = "ɢᴏᴏɢʟᴇ ᴀᴘɪ ♻️"
+    STATUS_MEGA = "ᴍᴇɢᴀ-sᴅᴋ ⭕️"
+    STATUS_QB = "ǫʙɪᴛᴛᴏʀʀᴇɴᴛ 🦠"
+    STATUS_TG = "ᴘʏʀᴏɢʀᴀᴍ 💥"
+    STATUS_YT = "ʏᴛ-ᴅʟᴘ 🌟"
+    STATUS_EXT = "ᴇxᴛʀᴀᴄᴛ|ᴘᴇxᴛʀᴀᴄᴛ ⚔️"
+    STATUS_SPLIT = "ғғᴍᴘᴇɢ✂️"
+    STATUS_ZIP = "ᴘ7ᴢɪᴘᴘ 🛠"
 
     
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']
@@ -181,28 +181,28 @@ def get_readable_message():
             msg += f"<code>{escape(str(download.name()))}</code>"
             if download.status() not in [MirrorStatus.STATUS_SEEDING, MirrorStatus.STATUS_SPLITTING]:
                 if EMOJI_THEME is True:
-                    msg += f"\n<b>├</b>{get_progress_bar_string(download)} {download.progress()}"
-                    msg += f"\n<b>├🔄 Process:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
-                    msg += f"\n<b>├⚡ Speed:</b> {download.speed()}"
-                    msg += f"\n<b>├⏳ ETA:</b> {download.eta()}"
-                    msg += f"<b> | Elapsed: </b>{get_readable_time(time() - download.message.date.timestamp())}"
-                    msg += f"\n<b>├⛓️ Engine :</b> {download.eng()}"
+                    msg += f"\n{get_progress_bar_string(download)} {download.progress()}"
+                    msg += f"\n<b>ᴘʀᴏᴄᴇss:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                    msg += f"\n<b>sᴘᴇᴇᴅ:</b> {download.speed()}"
+                    msg += f"\n<b>ᴇᴛᴀ:</b> {download.eta()}"
+                    msg += f"<b> | ᴇʟᴀᴘsᴇᴅ: </b>{get_readable_time(time() - download.message.date.timestamp())}"
+                    msg += f"\n<b>ᴇɴɢɪɴᴇ :</b> {download.eng()}"
 
                 else:
-                    msg += f"\n<b>├</b>{get_progress_bar_string(download)} {download.progress()}"
-                    msg += f"\n<b>├ Process:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
-                    msg += f"\n<b>├ Speed:</b> {download.speed()}"
-                    msg += f"\n<b>├ ETA:</b> {download.eta()}"
-                    msg += f"<b> | Elapsed: </b>{get_readable_time(time() - download.message.date.timestamp())}"
-                    msg += f"\n<b>├ Engine :</b> {download.eng()}"
+                    msg += f"\n{get_progress_bar_string(download)} {download.progress()}"
+                    msg += f"\n<b>ᴘʀᴏᴄᴇss:</b> {get_readable_file_size(download.processed_bytes())} of {download.size()}"
+                    msg += f"\n<b>sᴘᴇᴇᴅ {download.speed()}"
+                    msg += f"\n<b>ᴇᴛᴀ:</b> {download.eta()}"
+                    msg += f"<b> | ᴇʟᴀᴘsᴇᴅ: </b>{get_readable_time(time() - download.message.date.timestamp())}"
+                    msg += f"\n<b>ᴇɴɢɪɴᴇ :</b> {download.eng()}"
 
                 if hasattr(download, 'seeders_num'):
                     try:
                         if EMOJI_THEME is True:
-                            msg += f"\n<b>├🌱 Seeders:</b> {download.seeders_num()} | <b>🐌 Leechers:</b> {download.leechers_num()}"
+                            msg += f"\n<b>sᴇᴇᴅᴇʀs:</b> {download.seeders_num()} | <b>ʟᴇᴇᴄʜᴇʀs:</b> {download.leechers_num()}"
                             # msg += f"\n<b>├🧿 To Select:</b> <code>/{BotCommands.BtSelectCommand} {download.gid()}</code>"
                         else:
-                            msg += f"\n<b>├ Seeders:</b> {download.seeders_num()} | <b>Leechers:</b> {download.leechers_num()}"
+                            msg += f"\n<b>sᴇᴇᴅᴇʀs:</b> {download.seeders_num()} | <b>ʟᴇᴇᴄʜᴇʀs:</b> {download.leechers_num()}"
                             # msg += f"\n<b>├ To Select:</b> <code>/{BotCommands.BtSelectCommand} {download.gid()}</code>"
                     except:
                         pass
@@ -210,48 +210,48 @@ def get_readable_message():
                     try:
                         chatid = str(download.message.chat.id)[4:]
                         if EMOJI_THEME is True:
-                            msg += f'\n<b>├🌐 Source: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">{download.message.from_user.first_name}</a> | <b>Id :</b> <code>{download.message.from_user.id}</code>'
-                            msg += f"\n<b>╰❌ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                            msg += f'\n<b>sᴏᴜʀᴄᴇ: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">{download.message.from_user.first_name}</a> | <b>ɪᴅ :</b> <code>{download.message.from_user.id}</code>'
+                            msg += f"\n<b>ᴄᴀɴᴄᴇʟ</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
                         else:
-                            msg += f'\n<b>├ Source: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">{download.message.from_user.first_name}</a> | <b>Id :</b> <code>{download.message.from_user.id}</code>'
-                            msg += f"\n<b>╰ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"                 
+                            msg += f'\n<b>sᴏᴜʀᴄᴇ: </b><a href="https://t.me/c/{chatid}/{download.message.message_id}">{download.message.from_user.first_name}</a> | <b>ɪᴅ :</b> <code>{download.message.from_user.id}</code>'
+                            msg += f"\n<b>ᴄᴀɴᴄᴇʟ</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"                 
                     except:
                         pass
                 else:
                     if EMOJI_THEME is True:
-                        msg += f'\n<b>├👤 User:</b> ️<code>{download.message.from_user.first_name}</code> | <b>Id:</b> <code>{download.message.from_user.id}</code>'
-                        msg += f"\n<b>╰❌ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                        msg += f'\n<b>ᴜsᴇʀ:</b> ️<code>{download.message.from_user.first_name}</code> | <b>ɪᴅ:</b> <code>{download.message.from_user.id}</code>'
+                        msg += f"\n<b>ᴄᴀɴᴄᴇʟ</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
                     else:
-                        msg += f'\n<b>├ User:</b> ️<code>{download.message.from_user.first_name}</code> | <b>Id:</b> <code>{download.message.from_user.id}</code>'
-                        msg += f"\n<b>╰ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                        msg += f'\n<b>ᴜsᴇʀ:</b> ️<code>{download.message.from_user.first_name}</code> | <b>ɪᴅ:</b> <code>{download.message.from_user.id}</code>'
+                        msg += f"\n<b>ᴄᴀɴᴄᴇʟ</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
 
             elif download.status() == MirrorStatus.STATUS_SEEDING:
                 if EMOJI_THEME is True:
-                    msg += f"\n<b>├📦 Size: </b>{download.size()}"
-                    msg += f"\n<b>├⛓️ Engine:</b> <code>qBittorrent v4.4.2</code>"
-                    msg += f"\n<b>├⚡ Speed: </b>{download.upload_speed()}"
-                    msg += f"\n<b>├🔺 Uploaded: </b>{download.uploaded_bytes()}"
-                    msg += f"\n<b>├📎 Ratio: </b>{download.ratio()}"
-                    msg += f" | <b>⏲️ Time: </b>{download.seeding_time()}"
-                    msg += f"\n<b>├⏳ Elapsed: </b>{get_readable_time(time() - download.message.date.timestamp())}"
-                    msg += f"\n<b>╰❌ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+                    msg += f"\n<b>sɪᴢᴇ: </b>{download.size()}"
+                    msg += f"\n<b>ᴇɴɢɪɴᴇ:</b> <code>qBittorrent v4.4.2</code>"
+                    msg += f"\n<b>sᴘᴇᴇᴅ: </b>{download.upload_speed()}"
+                    msg += f"\n<b>ᴜᴘʟᴏᴀᴅᴇᴅ: </b>{download.uploaded_bytes()}"
+                    msg += f"\n<b>ʀᴀᴛɪᴏ: </b>{download.ratio()}"
+                    msg += f" | <b>ᴛɪᴍᴇ: </b>{download.seeding_time()}"
+                    msg += f"\n<b>ᴇʟᴀᴘsᴇᴅ: </b>{get_readable_time(time() - download.message.date.timestamp())}"
+                    msg += f"\n<b>ᴄᴀɴᴄᴇʟ</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
                 else:
-                    msg += f"\n<b>├ Size: </b>{download.size()}"
-                    msg += f"\n<b>├ Engine:</b> <code>qBittorrent v4.4.2</code>"
-                    msg += f"\n<b>├ Speed: </b>{download.upload_speed()}"
-                    msg += f"\n<b>├ Uploaded: </b>{download.uploaded_bytes()}"
-                    msg += f"\n<b>├ Ratio: </b>{download.ratio()}"
-                    msg += f" | <b> Time: </b>{download.seeding_time()}"
-                    msg += f"\n<b>├ Elapsed: </b>{get_readable_time(time() - download.message.date.timestamp())}"
-                    msg += f"\n<b>╰ </b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
-            else:
+                    msg += f"\n<b>sɪᴢᴇ: </b>{download.size()}"
+                    msg += f"\n<b>ᴇɴɢɪɴᴇ:</b> <code>qBittorrent v4.4.2</code>"
+                    msg += f"\n<b>sᴘᴇᴇᴅ: </b>{download.upload_speed()}"
+                    msg += f"\n<b>ᴜᴘʟᴏᴀᴅᴇᴅ: </b>{download.uploaded_bytes()}"
+                    msg += f"\n<b>ʀᴀᴛɪᴏ: </b>{download.ratio()}"
+                    msg += f" | <b>ᴛɪᴍᴇ: </b>{download.seeding_time()}"
+                    msg += f"\n<b>ᴇʟᴀᴘsᴇᴅ: </b>{get_readable_time(time() - download.message.date.timestamp())}"
+                    msg += f"\n<b>ᴄᴀɴᴄᴇʟ</b><code>/{BotCommands.CancelMirror} {download.gid()}</code>"
+             else:
                 if EMOJI_THEME is True:
-                    msg += f"\n<b>├⛓️ Engine :</b> {download.eng()}"
-                    msg += f"\n<b>╰📐 Size: </b>{download.size()}"
+                    msg += f"\n<b>ᴇɴɢɪɴᴇ:</b> {download.eng()}"
+                    msg += f"\n<b>sɪᴢᴇ: </b>{download.size()}"
                 else:
-                    msg += f"\n<b>├ Engine :</b> {download.eng()}"
-                    msg += f"\n<b>╰ Size: </b>{download.size()}"
-            msg += f"\n<b>_____________________________________</b>"
+                    msg += f"\n<b>ᴇɴɢɪɴᴇ:</b> {download.eng()}"
+                    msg += f"\n<b>sɪᴢᴇ: </b>{download.size()}"
+            msg += f"\n<b>________________ᴍs-x-ᴄʟᴏᴜᴅ______________</b>"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
@@ -280,35 +280,35 @@ def get_readable_message():
                 elif 'M' in spd:
                     up_speed += float(spd.split('M')[0]) * 1048576
         if EMOJI_THEME is True:
-            bmsg = f"<b>🖥 CPU:</b> {cpu_percent()}% | <b>💿 FREE:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
-            bmsg += f"\n<b>🎮 RAM:</b> {virtual_memory().percent}% | <b>🟢 UPTIME:</b> {get_readable_time(time() - botStartTime)}"
-            bmsg += f"\n<b>🔻 DL:</b> {get_readable_file_size(dl_speed)}/s | <b>🔺 UL:</b> {get_readable_file_size(up_speed)}/s"
+            bmsg = f"<b>ᴄᴘᴜ:</b> {cpu_percent()}% | <b>ғʀᴇᴇ:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
+            bmsg += f"\n<b>ʀᴀᴍ:</b> {virtual_memory().percent}% | <b>ᴜᴘᴛɪᴍᴇ:</b> {get_readable_time(time() - botStartTime)}"
+            bmsg += f"\n<b>ᴅʟ:</b> {get_readable_file_size(dl_speed)}/s | <b>ᴜʟ:</b> {get_readable_file_size(up_speed)}/s"
         else:
-            bmsg = f"<b>CPU:</b> {cpu_percent()}% | <b>FREE:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
-            bmsg += f"\n<b>RAM:</b> {virtual_memory().percent}% | <b>UPTIME:</b> {get_readable_time(time() - botStartTime)}"
-            bmsg += f"\n<b>DL:</b> {get_readable_file_size(dl_speed)}/s | <b>UL:</b> {get_readable_file_size(up_speed)}/s"
+            bmsg = f"<b>ᴄᴘᴜ:</b> {cpu_percent()}% | <b>ғʀᴇᴇ:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
+            bmsg += f"\n<b>ʀᴀᴍ:</b> {virtual_memory().percent}% | <b>ᴜᴘᴛɪᴍᴇ:</b> {get_readable_time(time() - botStartTime)}"
+            bmsg += f"\n<b>ᴅʟ:</b> {get_readable_file_size(dl_speed)}/s | <b>ᴜʟ:</b> {get_readable_file_size(up_speed)}/s"
         
         buttons = ButtonMaker()
-        buttons.sbutton("Refresh", "status refresh")
-        buttons.sbutton("Statistics", str(THREE))
-        buttons.sbutton("Close", "status close")
+        buttons.sbutton("ʀᴇғʀᴇsʜ", "status refresh")
+        buttons.sbutton("sᴛᴀᴛɪsᴛɪᴄs", str(THREE))
+        buttons.sbutton("ᴄʟᴏsᴇ", "status close")
         sbutton = buttons.build_menu(3)
         
         if STATUS_LIMIT is not None and tasks > STATUS_LIMIT:
-            msg += f"<b>Tasks:</b> {tasks}\n"
+            msg += f"<b>ᴛᴀsᴋs:</b> {tasks}\n"
             buttons = ButtonMaker()
             if EMOJI_THEME is True:
-                buttons.sbutton("⏪Previous", "status pre")
+                buttons.sbutton("⇇ʙᴀᴄᴋ", "status pre")
                 buttons.sbutton(f"{PAGE_NO}/{PAGES}", str(THREE))
-                buttons.sbutton("Next⏩", "status nex")
-                buttons.sbutton("Refresh", "status refresh")
-                buttons.sbutton("Close", "status close")
+                buttons.sbutton("ɴᴇxᴛ⇉", "status nex")
+                buttons.sbutton("ʀᴇғʀᴇsʜ", "status refresh")
+                buttons.sbutton("ᴄʟᴏsᴇ", "status close")
             else:
-                buttons.sbutton("Previous", "status pre")
+                buttons.sbutton("⇇ʙᴀᴄᴋ", "status pre")
                 buttons.sbutton(f"{PAGE_NO}/{PAGES}", str(THREE))
-                buttons.sbutton("Next", "status nex")
-                buttons.sbutton("Refresh", "status refresh")
-                buttons.sbutton("Close", "status close")
+                buttons.sbutton("ɴᴇxᴛ⇉", "status nex")
+                buttons.sbutton("ʀᴇғʀᴇsʜ", "status refresh")
+                buttons.sbutton("ᴄʟᴏsᴇ", "status close")
             button = buttons.build_menu(3)
             return msg + bmsg, button
         return msg + bmsg, sbutton
@@ -454,12 +454,12 @@ def bot_sys_stats():
        if stats.status() == MirrorStatus.STATUS_SPLITTING:
                 num_split += 1
     stats = f"""
-CPU : {cpu}% | RAM : {mem}%
-DL : {num_active} | UP : {num_upload} | SPLIT : {num_split}
-ZIP : {num_archi} | UNZIP : {num_extract} | TOTAL : {tasks}
-Limits : T/D : {TORRENT_DIRECT_LIMIT}GB | Z/U : {ZIP_UNZIP_LIMIT}GB
-                    L : {LEECH_LIMIT}GB | M : {MEGA_LIMIT}GB
-Made with ❤️ by {CREDIT_NAME}
+ᴄᴘᴜ : {cpu}% | ʀᴀᴍ : {mem}%
+ᴅʟ : {num_active} | ᴜᴘ : {num_upload} | sᴘʟɪᴛ : {num_split}
+ᴢɪᴘ : {num_archi} | ᴜɴᴢɪᴘ : {num_extract} | ᴛᴏᴛᴀʟ : {tasks}
+ʟɪᴍɪᴛs : ᴛ/ᴅ : {TORRENT_DIRECT_LIMIT}ɢʙ | ᴢ/ᴜ : {ZIP_UNZIP_LIMIT}ɢʙ
+                    L : {LEECH_LIMIT}ɢʙ | ᴍ : {MEGA_LIMIT}ɢʙ
+ᴍᴀᴅᴇ ᴡɪᴛʜ ʙʏ {CREDIT_NAME}
 """
     return stats
 dispatcher.add_handler(
