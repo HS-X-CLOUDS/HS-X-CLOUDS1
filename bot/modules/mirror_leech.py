@@ -54,8 +54,6 @@ elif data.split("-", 1)[0] == "verify":
                 text="<b>Invalid link or Expired link !</b>",
                 protect_content=True
             )
-
-    if VERIFY:
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
@@ -67,26 +65,6 @@ elif data.split("-", 1)[0] == "verify":
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-       #elif data.split("-", 1)[0] == "verify":
-       # userid = data.split("-", 2)[1]
-        #token = data.split("-", 3)[2]
-        #if str(message.from_user.id) != str(userid):
-           # return await message.reply_text(
-               # text="<b>Invalid link or Expired link !</b>",
-                #protect_content=True
-            #)
-        #is_valid = await check_token(client, userid, token)
-        #if is_valid == True:
-           # await message.reply_text(
-                #text=f"<b>ʜᴇʏ {message.from_user.mention}, ʏᴏᴜ ᴀʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴠᴇʀɪꜰɪᴇᴅ !\nɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ꜰᴏʀ ᴀʟʟ ᴍᴏᴠɪᴇꜱ ᴛɪʟʟ ᴛᴏᴅᴀʏ ᴍɪᴅɴɪɢʜᴛ.</b>",
-                #protect_content=True
-           # )
-           # await verify_user(client, userid, token)
-        #else:
-            #return await message.reply_text(
-               # text="<b>Invalid link or Expired link !</b>",
-               # protect_content=True
-           # )
 
     if FSUB:
         try:
