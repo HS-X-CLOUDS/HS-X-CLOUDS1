@@ -251,7 +251,7 @@ def get_readable_message():
                 else:
                     msg += f"\n<b>ᴇɴɢɪɴᴇ:</b> {download.eng()}"
                     msg += f"\n<b>sɪᴢᴇ: </b>{download.size()}"
-            msg += f"\n<b>___________ᴍs-x-ᴄʟᴏᴜᴅ____________</b>"
+            msg += f"\n\n<b>___________<a href='https://t.me/MSXCloud'>ᴍs-x-ᴄʟᴏᴜᴅ</a>_____________</b>"
             msg += "\n\n"
             if STATUS_LIMIT is not None and index == STATUS_LIMIT:
                 break
