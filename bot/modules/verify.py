@@ -5,8 +5,8 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 async def get_verify_shorted_link(link):
-    SHORTNER_API = ""
-    SHORTNER_URL = ""
+    SHORTNER_API = "a33ce12542055ff79361d9bcc681ece612bdcaf8"
+    SHORTNER_URL = "kpslink.in"
     https = link.split(":")[0]
     if "http" == https:
         https = "https"
