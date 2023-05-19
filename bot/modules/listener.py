@@ -275,13 +275,13 @@ class MirrorLeechListener:
             file_ = _newExtFileName
 
         if EMOJI_THEME is True:
-            slmsg = f"🗂️ Name: <{NAME_FONT}>{file_}</{NAME_FONT}>\n\n"
-            slmsg += f"📐 Size: {size}\n"
-            slmsg += f"👥 Added by: {self.tag} | <code>{self.user_id}</code>\n\n"
+            slmsg = f"ɴᴀᴍᴇ : <{NAME_FONT}>{file_}</{NAME_FONT}>\n\n"
+            slmsg += f"sɪᴢᴇ : {size}\n\n"
+            slmsg += f"ᴀᴅᴅᴇᴅ ʙʏ : {self.tag} | <code>{self.user_id}</code>\n\n"
         else:
-            slmsg = f"Name: <{NAME_FONT}>{file_}</{NAME_FONT}>\n\n"
-            slmsg += f"Size: {size}\n"
-            slmsg += f"Added by: {self.tag} | <code>{self.user_id}</code>\n\n"
+            slmsg = f"ɴᴀᴍᴇ : <{NAME_FONT}>{file_}</{NAME_FONT}>\n\n"
+            slmsg += f"sɪᴢᴇ : {size}\n\n"
+            slmsg += f"ᴀᴅᴅᴇᴅ ʙʏ: {self.tag} | <code>{self.user_id}</code>\n\n"
         if LINK_LOGS:
             try:
                 upper = f"‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒\n"
@@ -318,9 +318,9 @@ class MirrorLeechListener:
             warnmsg = ''
         if BOT_PM and self.message.chat.type != 'private':
             if EMOJI_THEME is True:
-                pmwarn = f"<b>😉 I have sent files in PM.</b>\n"
+                pmwarn = f"<b>🤖 ɪ ʜᴀᴠᴇ sᴇɴᴅ ғɪʟᴇs ɪɴ ᴘᴍ .</b>\n"
             else:
-                pmwarn = f"<b>I have sent files in PM.</b>\n"
+                pmwarn = f"<b>ɪ ʜᴀᴠᴇ sᴇɴᴅ ғɪʟᴇs ɪɴ ᴘᴍ.</b>\n"
         elif self.message.chat.type == 'private':
             pmwarn = ''
         else:
