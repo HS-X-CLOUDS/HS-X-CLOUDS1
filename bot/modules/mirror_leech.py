@@ -112,7 +112,7 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
             Thread(target=auto_delete_message, args=(bot, message, reply_message)).start()
             return reply_message
 	
-     if VERIFY and message.chat.type != 'private'
+     if VERIFY and message.chat.type != 'public':
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
