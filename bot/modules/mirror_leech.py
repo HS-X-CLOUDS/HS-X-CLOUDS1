@@ -44,7 +44,7 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
                # protect_content=True
           #  )
     if VERIFY:
-	try:
+       try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
                     InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
