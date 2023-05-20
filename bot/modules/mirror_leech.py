@@ -12,7 +12,7 @@ from telegram.ext import CommandHandler
 from telegram import ParseMode, InlineKeyboardButton
 
 from bot import *
-#from .verify import verify_user, check_token, check_verification, get_token
+from .verify import verify_user, check_token, check_verification, get_token
 from bot.helper.ext_utils.bot_utils import is_url, is_magnet, is_gdtot_link, is_mega_link, is_gdrive_link, is_unified_link, is_udrive_link, get_content_type, get_readable_time, get_user_task
 from bot.helper.ext_utils.timegap import timegap_check
 from bot.helper.ext_utils.exceptions import DirectDownloadLinkException, NotSupportedExtractionArchive
@@ -111,6 +111,39 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
             reply_message = sendMarkup(startwarn, bot, message, buttons.build_menu(2))
             Thread(target=auto_delete_message, args=(bot, message, reply_message)).start()
             return reply_message
+	
+     if VERIFY and message.chat.type != 'private':
+         try:
+            if not await check_verification(client, message.from_user.id) and VERIFY == True:
+                btn = [[
+                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                ]]
+                await message.reply_text(
+                    text="<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴠᴇʀɪꜰɪᴇᴅ  !\nᴋɪɴᴅʟʏ ᴠᴇʀɪꜰʏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ !</b>",
+                    protect_content=True,
+                    reply_markup=InlineKeyboardMarkup(btn)
+                )
+                return
+	elif data.split("-", 1)[0] == "verify":
+        userid = data.split("-", 2)[1]
+        token = data.split("-", 3)[2]
+        if str(message.from_user.id) != str(userid):
+            return await message.reply_text(
+                text="<b>Invalid link or Expired link !</b>",
+                protect_content=True
+            )
+        is_valid = await check_token(client, userid, token)
+        if is_valid == True:
+            await message.reply_text(
+                text=f"<b>ʜᴇʏ {message.from_user.mention}, ʏᴏᴜ ᴀʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴠᴇʀɪꜰɪᴇᴅ !\nɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ꜰᴏʀ ᴀʟʟ ᴍᴏᴠɪᴇꜱ ᴛɪʟʟ ᴛᴏᴅᴀʏ ᴍɪᴅɴɪɢʜᴛ.</b>",
+                protect_content=True
+            )
+            await verify_user(client, userid, token)
+        else:
+            return await message.reply_text(
+                text="<b>Invalid link or Expired link !</b>",
+                protect_content=True
+            )
 
     total_task = len(download_dict)
     user_id = message.from_user.id
