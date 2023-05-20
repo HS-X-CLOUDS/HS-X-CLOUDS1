@@ -63,7 +63,7 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
                 protect_content=True
             )
             await verify_user(client, userid, token)
-        else:
+        else
             return await message.reply_text(
                 text="<b>Invalid link or Expired link !</b>",
                 protect_content=True
