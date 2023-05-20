@@ -35,14 +35,14 @@ logger = logging.getLogger(__name__)
 def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLeech=False):
     buttons = ButtonMaker()
 
-	data.split("-", 1)[0] == "verify":
-        userid = data.split("-", 2)[1]
-        token = data.split("-", 3)[2]
-        if str(message.from_user.id) != str(userid):
-            return await message.reply_text(
-                text="<b>Invalid link or Expired link !</b>",
-                protect_content=True
-            )
+#data.split("-", 1)[0] == "verify":
+       # userid = data.split("-", 2)[1]
+       # token = data.split("-", 3)[2]
+      #  if str(message.from_user.id) != str(userid):
+         #   return await message.reply_text(
+              #  text="<b>Invalid link or Expired link !</b>",
+               # protect_content=True
+          #  )
     if VERIFY:
 	try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
