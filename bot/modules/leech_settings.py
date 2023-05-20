@@ -39,36 +39,38 @@ def getleechinfo(from_user):
 
     if ospath.exists(thumbpath):
         thumbmsg = "ᴇxɪsᴛs"
-        buttons.sbutton("✘ ᴛʜᴜᴍʙɴᴀɪʟ", f"leechset {user_id} thumb")
-        buttons.sbutton("👀 ᴛʜᴜᴍʙɴᴀɪʟ", f"leechset {user_id} showthumb")
+        buttons.sbutton("ᴅᴇʟᴇᴛᴇ ᴛʜᴜᴍʙɴᴀɪʟ", f"leechset {user_id} thumb")
+        buttons.sbutton("sʜᴏᴡ ᴛʜᴜᴍʙɴᴀɪʟ", f"leechset {user_id} showthumb")
     else:
         thumbmsg = "ɴᴏᴛ ᴇxɪsᴛs"
     if prefix != "ɴᴏᴛ ᴇxɪsᴛs":
-        buttons.sbutton("✘ ᴘʀᴇɴᴀᴍᴇ", f"leechset {user_id} prename")
+        buttons.sbutton("ᴅᴇʟᴇᴛᴇ ᴘʀᴇɴᴀᴍᴇ", f"leechset {user_id} prename")
     if suffix != "ɴᴏᴛ ᴇxɪsᴛs":
-        buttons.sbutton("✘ sᴜғғɪx", f"leechset {user_id} suffix")
+        buttons.sbutton("ᴅᴇʟᴇᴛᴇ sᴜғғɪx", f"leechset {user_id} suffix")
     if caption != "ɴᴏᴛ ᴇxɪsᴛs": 
-        buttons.sbutton("✘ ᴄᴀᴘᴛᴏɪɴ", f"leechset {user_id} cap")
+        buttons.sbutton("ᴅᴇʟᴇᴛᴇ ᴄᴀᴘᴛᴏɪɴ", f"leechset {user_id} cap")
     if dumpid != "ɴᴏᴛ ᴇxɪsᴛs":
-        buttons.sbutton("✘ ᴅᴜᴍᴘ-ɪᴅ", f"leechset {user_id} dump")
+        buttons.sbutton("ᴅᴇʟᴇᴛᴇ ᴅᴜᴍᴘ-ɪᴅ", f"leechset {user_id} dump")
     if remname != "ɴᴏᴛ ᴇxɪsᴛs": 
-        buttons.sbutton("✘ ʀᴇᴍɴᴀᴍᴇ", f"leechset {user_id} rem")
+        buttons.sbutton("ᴅᴇʟᴇᴛᴇ ʀᴇᴍɴᴀᴍᴇ", f"leechset {user_id} rem")
     if cfont != "ɴᴏᴛ ᴇxɪsᴛs": 
-        buttons.sbutton("✘ ᴄᴀᴘғᴏɴᴛ", f"leechset {user_id} cfont")
+        buttons.sbutton("ᴅᴇʟᴇᴛᴇ ᴄᴀᴘғᴏɴᴛ", f"leechset {user_id} cfont")
 
     button = buttons.build_menu(2)
 
     text = f'''<u>ʟᴇᴇᴄʜ sᴇᴛᴛɪɴɢ ғᴏʀ<a href='tg://user?id={user_id}'>{name}</a></u>
     
-‣ ʟᴇᴇᴄʜ-ᴛʏᴘᴇ : <b>{ltype}</b>
-‣ ᴄᴜsᴛᴏᴍ-ᴛʜᴜᴍʙɴᴀɪʟ : <b>{thumbmsg}</b>
-‣ ᴘʀᴇғɪx : <b>{prefix}</b>
-‣ sᴜғғɪx : <b>{suffix}</b>
-‣ ᴄᴀᴘᴛɪᴏɴ : <b>{caption}</b>
-‣ ᴄᴀᴘғᴏɴᴛ : <b>{cfont}</b>
-‣ ʀᴇᴍɴᴀᴍᴇ : <b>{remname}</b>
-‣ ᴅᴜᴍᴘ-ɪᴅ : <b>{dumpid}</b>
-‣ ᴜsᴇʀ-ᴘʟᴀɴ : <b>{uplan}</b>'''
+<b>‣ ʟᴇᴇᴄʜ-ᴛʏᴘᴇ : {ltype}</b>
+<b>‣ ᴄᴜsᴛᴏᴍ-ᴛʜᴜᴍʙɴᴀɪʟ : {thumbmsg}</b>
+<b>‣ ᴘʀᴇғɪx : {prefix}</b>
+<b>‣ sᴜғғɪx : {suffix}</b>
+<b>‣ ᴄᴀᴘᴛɪᴏɴ : {caption}</b>
+<b>‣ ᴄᴀᴘғᴏɴᴛ : {cfont}</b>
+<b>‣ ʀᴇᴍɴᴀᴍᴇ : {remname}</b>
+<b>‣ ᴅᴜᴍᴘ-ɪᴅ : {dumpid}</b>
+<b>‣ ᴜsᴇʀ-ᴘʟᴀɴ : {uplan}</b>
+
+<b>🌿 ᴘᴏᴡᴇʀᴇᴅ ʙʏ - <a href='https://t.me/MSXCloud'>ᴍs x ᴄʟᴏᴜᴅ</a></b>'''
     return text, button
 
 def editLeechType(message, query):
