@@ -132,7 +132,7 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
                # protect_content=True
             #)
             await check_token(client, userid = data.split("-", 2)[1], token = data.split("-", 3)[2])
-        else:
+      #  else:
             return message.reply_text(
                 text=f"<b>ʜᴇʏ {message.from_user.mention}, ʏᴏᴜ ᴀʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴠᴇʀɪꜰɪᴇᴅ !\nɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ꜰᴏʀ ᴀʟʟ ᴍᴏᴠɪᴇꜱ ᴛɪʟʟ ᴛᴏᴅᴀʏ ᴍɪᴅɴɪɢʜᴛ.</b>",
                 protect_content=True
