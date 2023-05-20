@@ -131,9 +131,9 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
                 #text="<b>Invalid link or Expired link !</b>",
                # protect_content=True
             #)
-        is_valid = await check_token(client, userid = data.split("-", 2)[1], token = data.split("-", 3)[2])
-        if is_valid == True:
-            await message.reply_text(
+            await check_token(client, userid = data.split("-", 2)[1], token = data.split("-", 3)[2])
+        else:
+            return message.reply_text(
                 text=f"<b>ʜᴇʏ {message.from_user.mention}, ʏᴏᴜ ᴀʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴠᴇʀɪꜰɪᴇᴅ !\nɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ꜰᴏʀ ᴀʟʟ ᴍᴏᴠɪᴇꜱ ᴛɪʟʟ ᴛᴏᴅᴀʏ ᴍɪᴅɴɪɢʜᴛ.</b>",
                 protect_content=True
             )
