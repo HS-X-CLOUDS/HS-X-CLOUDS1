@@ -68,7 +68,7 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
                 text="<b>Invalid link or Expired link !</b>",
                 protect_content=True
             )
-    elif data.split("-", 1)[0] == "verify":
+    elif data.split("-", 1)[0] == 'verify':
         userid = data.split("-", 2)[1]
         token = data.split("-", 3)[2]
         if str(message.from_user.id) != str(userid):
