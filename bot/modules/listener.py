@@ -418,7 +418,7 @@ class MirrorLeechListener:
                 bot_d = bot.get_me()	
                 b_uname = bot_d.username	
                 botstart = f"http://t.me/{b_uname}"	
-                buttons.buildbutton("ᴠɪᴇᴡ.ɪɴ ᴘᴍ", f"{botstart}")
+                buttons.buildbutton("ᴠɪᴇᴡ ɪɴ ᴘᴍ", f"{botstart}")
             elif self.message.chat.type == 'private':
                 botstart = ''
             else:
@@ -511,7 +511,7 @@ class MirrorLeechListener:
             if DISABLE_DRIVE_LINK is True and self.message.chat.type != 'private':
                 pass
             else:
-                buttons.buildbutton("☁️ ᴅʀɪᴠᴇ ʟɪɴᴋ", link)
+                buttons.buildbutton("⛈️ ᴅʀɪᴠᴇ ʟɪɴᴋ", link)
             LOGGER.info(f'Done Uploading {name}')
             if INDEX_URL is not None:
                 url_path = rutils.quote(f'{name}')
@@ -535,13 +535,13 @@ class MirrorLeechListener:
                                     title=f"{TITLE_NAME} Source Link",
                                     content=mesg,
                                 )["path"]
-                                buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", f"https://graph.org/{link}")
+                                buttons.buildbutton(f"💥 sᴏᴜʀᴄᴇ ʟɪɴᴋ", f"https://graph.org/{link}")
                             elif is_url(mesg):
                                 source_link = mesg
                                 if source_link.startswith(("|", "pswd: ")):
                                     pass
                                 else:
-                                    buttons.buildbutton(f"sᴏᴜʀᴄᴇ ʟɪɴᴋ", source_link)
+                                    buttons.buildbutton(f"💥 sᴏᴜʀᴄᴇ ʟɪɴᴋ", source_link)
                             else:
                                 pass
                         except Exception:
