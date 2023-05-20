@@ -146,23 +146,23 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
 
    # total_task = len(download_dict)
    # user_id = message.from_user.id
-    if user_id = message.from_user.id != OWNER_ID and user_id not in SUDO_USERS and user_id not in PAID_USERS:
-        if PAID_SERVICE is True:
-            if TOTAL_TASKS_LIMIT == total_task = len(download_dict):
-                return sendMessage(f"<b>ʙᴏᴛ ᴛᴏᴛᴀʟ ᴛᴀsᴋ ʟɪᴍɪᴛ : {TOTAL_TASKS_LIMIT}\nᴛᴀsᴋs ᴘʀᴏᴄᴇssɪɴɢ : {total_task}\n#ᴛᴏᴛᴀʟ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ</b>\n#ʙᴜʏ ᴘᴀɪᴅ sᴇʀᴠɪᴄᴇ", bot ,message)
-            if USER_TASKS_LIMIT == get_user_task(user_id):
-                return sendMessage(f"<b>ʙᴏᴛ ᴛᴏᴛᴀʟ ᴛᴀsᴋ ʟɪᴍɪᴛ : {USER_TASKS_LIMIT} \nʏᴏᴜʀ ᴛᴀsᴋs : {get_user_task(user_id)}\n#ᴜsᴇʀ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ</b>\n#ʙᴜʏ ᴘᴀɪᴅ sᴇʀᴠɪᴄᴇ", bot ,message)
-        else:
-            if TOTAL_TASKS_LIMIT == total_task:
-                return sendMessage(f"<b>ʙᴏᴛ ᴛᴏᴛᴀʟ ᴛᴀsᴋ ʟɪᴍɪᴛ : {TOTAL_TASKS_LIMIT}\nᴛᴀsᴋs ᴘʀᴏᴄᴇssɪɴɢ : {total_task}\n#ᴛᴏᴛᴀʟ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ </b>", bot ,message)
-            if USER_TASKS_LIMIT == get_user_task(user_id):
-                return sendMessage(f"<b>ʙᴏᴛ ᴛᴏᴛᴀʟ ᴛᴀsᴋ ʟɪᴍɪᴛ : {USER_TASKS_LIMIT} \nʏᴏᴜʀ ᴛᴀsᴋs : {get_user_task(user_id)}\n#ᴜsᴇʀ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ</b>", bot ,message)
+   #if user_id = message.from_user.id = OWNER_ID and user_id not in SUDO_USERS and user_id not in PAID_USERS:
+       # if PAID_SERVICE is True:
+           # if TOTAL_TASKS_LIMIT == total_task = len(download_dict):
+              #  return sendMessage(f"<b>ʙᴏᴛ ᴛᴏᴛᴀʟ ᴛᴀsᴋ ʟɪᴍɪᴛ : {TOTAL_TASKS_LIMIT}\nᴛᴀsᴋs ᴘʀᴏᴄᴇssɪɴɢ : {total_task}\n#ᴛᴏᴛᴀʟ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ</b>\n#ʙᴜʏ ᴘᴀɪᴅ sᴇʀᴠɪᴄᴇ", bot ,message)
+          #  if USER_TASKS_LIMIT == get_user_task(user_id):
+           #     return sendMessage(f"<b>ʙᴏᴛ ᴛᴏᴛᴀʟ ᴛᴀsᴋ ʟɪᴍɪᴛ : {USER_TASKS_LIMIT} \nʏᴏᴜʀ ᴛᴀsᴋs : {get_user_task(user_id)}\n#ᴜsᴇʀ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ</b>\n#ʙᴜʏ ᴘᴀɪᴅ sᴇʀᴠɪᴄᴇ", bot ,message)
+       # else:
+           # if TOTAL_TASKS_LIMIT == total_task:
+            #    return sendMessage(f"<b>ʙᴏᴛ ᴛᴏᴛᴀʟ ᴛᴀsᴋ ʟɪᴍɪᴛ : {TOTAL_TASKS_LIMIT}\nᴛᴀsᴋs ᴘʀᴏᴄᴇssɪɴɢ : {total_task}\n#ᴛᴏᴛᴀʟ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ </b>", bot ,message)
+           # if USER_TASKS_LIMIT == get_user_task(user_id):
+              #  return sendMessage(f"<b>ʙᴏᴛ ᴛᴏᴛᴀʟ ᴛᴀsᴋ ʟɪᴍɪᴛ : {USER_TASKS_LIMIT} \nʏᴏᴜʀ ᴛᴀsᴋs : {get_user_task(user_id)}\n#ᴜsᴇʀ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ</b>", bot ,message)
 
-    if user_id != OWNER_ID and user_id not in SUDO_USERS and user_id not in PAID_USERS:
-        time_gap = timegap_check(message)
-        if time_gap:
-            return
-        TIME_GAP_STORE[message.from_user.id] = time()
+#    if user_id != OWNER_ID and user_id not in SUDO_USERS and user_id not in PAID_USERS:
+    #    time_gap = timegap_check(message)
+  #      if time_gap:
+    #        return
+   #     TIME_GAP_STORE[message.from_user.id] = time()
 
     mesg = message.text.split('\n')
     message_args = mesg[0].split(maxsplit=1)
