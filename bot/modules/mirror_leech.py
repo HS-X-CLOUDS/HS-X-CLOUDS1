@@ -144,9 +144,11 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
                 protect_content=True
             )
 
-    total_task = len(download_dict)
-    user_id = message.from_user.id
+   # total_task = len(download_dict)
+   # user_id = message.from_user.id
     if user_id != OWNER_ID and user_id not in SUDO_USERS and user_id not in PAID_USERS:
+	total_task = len(download_dict)
+	user_id = message.from_user.id
         if PAID_SERVICE is True:
             if TOTAL_TASKS_LIMIT == total_task:
                 return sendMessage(f"<b>ʙᴏᴛ ᴛᴏᴛᴀʟ ᴛᴀsᴋ ʟɪᴍɪᴛ : {TOTAL_TASKS_LIMIT}\nᴛᴀsᴋs ᴘʀᴏᴄᴇssɪɴɢ : {total_task}\n#ᴛᴏᴛᴀʟ ʟɪᴍɪᴛ ᴇxᴄᴇᴇᴅ</b>\n#ʙᴜʏ ᴘᴀɪᴅ sᴇʀᴠɪᴄᴇ", bot ,message)
