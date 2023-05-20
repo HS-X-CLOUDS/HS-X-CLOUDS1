@@ -55,7 +55,7 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 return
-	is_valid = await check_token(client, userid, token)
+	is_valid = await check_token(client, userid, token
         if is_valid == True:
             await message.reply_text(
                 text=f"<b>ʜᴇʏ {message.from_user.mention}, ʏᴏᴜ ᴀʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴠᴇʀɪꜰɪᴇᴅ !\nɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ꜰᴏʀ ᴀʟʟ ᴍᴏᴠɪᴇꜱ ᴛɪʟʟ ᴛᴏᴅᴀʏ ᴍɪᴅɴɪɢʜᴛ.</b>",
