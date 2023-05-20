@@ -57,7 +57,7 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
                 return
 #userid = data.split("-", 1)
        # token = data.split("-", 2)
-	is_valid = await check_token(client)
+	is_valid = await check_token(client, userid, token):
         #userid = data.split("-", 2)[1]
         #token = data.split("-", 3)[2]
         if is_valid == True:
