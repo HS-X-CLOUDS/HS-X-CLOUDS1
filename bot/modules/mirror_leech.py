@@ -89,7 +89,7 @@ def _mirror_leech(bot, message, isZip=False, extract=False, isQbit=False, isLeec
             return
         TIME_GAP_STORE[message.from_user.id] = time()
 	
-def data split("-", 1)[0] == "verify":
+        if data.split("-", 1)[0] == "verify":
         userid = data.split("-", 2)[1]
         token = data.split("-", 3)[2]
         if str(message.from_user.id) != str(userid):
