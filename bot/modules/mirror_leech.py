@@ -111,8 +111,6 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
             reply_message = sendMarkup(startwarn, bot, message, buttons.build_menu(2))
             Thread(target=auto_delete_message, args=(bot, message, reply_message)).start()
             return reply_message
-	
-     if VERIFY:
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
