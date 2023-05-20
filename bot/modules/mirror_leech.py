@@ -30,7 +30,7 @@ from bot.helper.ext_utils.telegraph_helper import telegraph
 from bot.helper.telegram_helper.button_build import ButtonMaker
 from .listener import MirrorLeechListener
 
-#logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__)
 
 def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLeech=False):
     buttons = ButtonMaker()
@@ -126,12 +126,12 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
         #"verify" = data.split("-", 1)[0]
        # userid = data.split("-", 2)[1]
         #token = data.split("-", 3)[2]
-        if str(message.from_user.id) != str(userid = data.split("-", 2)[1]):
-            return await message.reply_text(
-                text="<b>Invalid link or Expired link !</b>",
-                protect_content=True
-            )
-        is_valid = await check_token(client, userid, token)
+       # if str(message.from_user.id) != str(userid = data.split("-", 2)[1]):
+           # return await message.reply_text(
+                #text="<b>Invalid link or Expired link !</b>",
+               # protect_content=True
+            #)
+        is_valid = await check_token(client, userid = data.split("-", 2)[1], token = data.split("-", 3)[2])
         if is_valid == True:
             await message.reply_text(
                 text=f"<b>ʜᴇʏ {message.from_user.mention}, ʏᴏᴜ ᴀʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴠᴇʀɪꜰɪᴇᴅ !\nɴᴏᴡ ʏᴏᴜ ʜᴀᴠᴇ ᴜɴʟɪᴍɪᴛᴇᴅ ᴀᴄᴄᴇꜱꜱ ꜰᴏʀ ᴀʟʟ ᴍᴏᴠɪᴇꜱ ᴛɪʟʟ ᴛᴏᴅᴀʏ ᴍɪᴅɴɪɢʜᴛ.</b>",
