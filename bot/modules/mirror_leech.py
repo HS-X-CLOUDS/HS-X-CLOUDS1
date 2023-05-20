@@ -123,6 +123,7 @@ def _mirror_leech (bot, message, isZip=False, extract=False, isQbit=False, isLee
                 )
                 return
 #elif data.split("-", 1)[0] == "verify":
+        verify = data.split("-", 1)[0]
         userid = data.split("-", 2)[1]
         token = data.split("-", 3)[2]
         if str(message.from_user.id) != str(userid):
