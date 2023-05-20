@@ -57,7 +57,7 @@ def suffix_set(update, context):
         help_msg += f"\n<code>/{BotCommands.SufNameCommand}" + " {message}" + "</code>"
         sendMessage(help_msg, context.bot, update.message)
     else:
-        lm = sendMessage(f"<b>Please Wait....Processing🤖</b>", context.bot, update.message)
+        lm = sendMessage(f"<b>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...ᴘʀᴏᴄᴇssɪɴɢ 😇</b>", context.bot, update.message)
         pre_send = update.message.text.split(" ", maxsplit=1)
         reply_to = update.message.reply_to_message
         if len(pre_send) > 1:
@@ -70,7 +70,7 @@ def suffix_set(update, context):
         SUF_DICT[user_id_] = suffix_
         if DB_URI:
             DbManger().user_suf(user_id_, suffix_)
-            LOGGER.info(f"User : {user_id_} Suffix is Saved in DB")
+            LOGGER.info(f"User : {user_id_} sᴜғғɪx ɪs sᴀᴠᴇᴅ ɪɴ ᴅᴀᴛᴀʙᴀsᴇ")
         editMessage(f"<u><b><a href='tg://user?id={user_id_}'>{u_men}</a>'s Suffix is Set Successfully 🚀</b></u>\n\n<b>• Suffix Text: </b>{txt}", lm)
 
 
@@ -83,7 +83,7 @@ def caption_set(update, context):
         if not (user_id_ in PAID_USERS) and user_id_ != OWNER_ID:
             sendMessage(f"Buy Paid Service to Use this Caption Feature.", context.bot, update.message)
             return
-    buttons.sbutton("🛠 Change Font Style", f"capfont {user_id_} font")
+    buttons.sbutton("🛰️ ᴄʜᴀɴɢᴇ ғᴏɴᴛ sᴛʏʟᴇ 🛰️", f"capfont {user_id_} font")
     button = buttons.build_menu(2)
     if (BotCommands.CaptionCommand in update.message.text) and (len(update.message.text.split(' ')) == 1):
         hlp_me = "<b>Send text with format along with command line:</b>\n"
@@ -107,7 +107,7 @@ def caption_set(update, context):
 5. For New Line, Just Press Simple Enter on your Keyboard.'''
         sendMarkup(hlp_me, context.bot, update.message, button)
     else:
-        lm = sendMessage(f"<b>Please Wait....Processing🤖</b>", context.bot, update.message)
+        lm = sendMessage(f"<b>ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...ᴘʀᴏᴄᴇssɪɴɢ 🚀</b>", context.bot, update.message)
         pre_send = update.message.text.split(" ", maxsplit=1)
         reply_to = update.message.reply_to_message
         if len(pre_send) > 1:
@@ -120,7 +120,7 @@ def caption_set(update, context):
         CAP_DICT[user_id_] = caption_
         if DB_URI:
             DbManger().user_cap(user_id_, caption_)
-            LOGGER.info(f"User : {user_id_} Caption is Saved in DB")
+            LOGGER.info(f"User : {user_id_} ᴄᴀᴘᴛɪᴏɴ ɪs sᴀᴠᴇᴅ ɪɴ ᴅᴀᴛᴀʙᴀsᴇ ")
         editMessage(f"<b><u><a href='tg://user?id={user_id_}'>{u_men}</a>'s Caption is Set Successfully :</u></b>\n\n<b>• Caption Text: </b>{txt}", lm, button)
 
 
@@ -131,13 +131,13 @@ def setCapFont(update, context):
     data = query.data
     data = data.split()
     buttons = ButtonMaker()
-    buttons.sbutton("Spoiler", f"capfont {user_id_} Spoiler")
-    buttons.sbutton("Italics", f"capfont {user_id_} Italics")
-    buttons.sbutton("Monospace", f"capfont {user_id_} Code")
-    buttons.sbutton("Strike", f"capfont {user_id_} Strike")
-    buttons.sbutton("Underline", f"capfont {user_id_} Underline")
-    buttons.sbutton("Bold", f"capfont {user_id_} Bold")
-    buttons.sbutton("Regular", f"capfont {user_id_} Regular")
+    buttons.sbutton("sᴘɪʟᴇʀ", f"capfont {user_id_} Spoiler")
+    buttons.sbutton("ɪᴛᴀʟɪᴄs", f"capfont {user_id_} Italics")
+    buttons.sbutton("ᴍᴏɴᴏsᴘᴀᴄᴇ", f"capfont {user_id_} Code")
+    buttons.sbutton("sᴛʀɪᴋᴇ", f"capfont {user_id_} Strike")
+    buttons.sbutton("ᴜɴᴅᴇʀʟɪɴᴇ", f"capfont {user_id_} Underline")
+    buttons.sbutton("ʙᴏʟᴅ", f"capfont {user_id_} Bold")
+    buttons.sbutton("ʀᴇɢᴜʟᴀʀ", f"capfont {user_id_} Regular")
     btns = buttons.build_menu(2)
     if user_id_ != int(data[1]):
         query.answer(text="Not Yours!", show_alert=True)
