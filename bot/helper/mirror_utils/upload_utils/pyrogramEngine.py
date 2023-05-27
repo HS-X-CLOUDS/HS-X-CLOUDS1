@@ -1,12 +1,13 @@
 import re
 import os
+from requests import utils as rutils
 from logging import getLogger, ERROR
 from os import remove as osremove, walk, path as ospath, rename as osrename
 from time import time, sleep
 from pyrogram.errors import FloodWait, RPCError
 from PIL import Image
 from threading import RLock
-from bot import AS_DOCUMENT, AS_DOC_USERS, AS_MEDIA_USERS, EXTENSION_FILTER, \
+from bot import AS_DOCUMENT, INDEX_URL, AS_DOC_USERS, AS_MEDIA_USERS, EXTENSION_FILTER, \
                 app, LEECH_LOG, BOT_PM, tgBotMaxFileSize, premium_session, CAPTION_FONT, \
                 PRE_DICT, LEECH_DICT, LOG_LEECH, CAP_DICT, REM_DICT, SUF_DICT, CFONT_DICT
 from bot.helper.ext_utils.fs_utils import take_ss, get_media_info, get_media_streams, get_path_size, clean_unwanted
@@ -127,7 +128,10 @@ class TgUploader:
             slit = CAPTION.split("|")
             cap_mono = slit[0].format(
                 filename = file_,
-                size = get_readable_file_size(ospath.getsize(up_path))
+                size = get_readable_file_size(ospath.getsize(up_path)),
+                url_path = rutils.quote(f'{name}')
+                share_url = f'{INDEX_URL}/{url_path}'
+                Fast Download link - share_url
             )
             if len(slit) > 1:
                 for rep in range(1, len(slit)):
