@@ -129,7 +129,7 @@ class TgUploader:
             cap_mono = slit[0].format(
                 filename = file_,
                 size = get_readable_file_size(ospath.getsize(up_path)),
-                name = str(download.name()).replace('/', '')
+                name = (download.name()).replace('/', '')
                 url_path = rutils.quote(f'{name}')
                 share_url = f'{INDEX_URL}/{url_path}'
                 Fast Download link - share_url
