@@ -128,11 +128,7 @@ class TgUploader:
             slit = CAPTION.split("|")
             cap_mono = slit[0].format(
                 filename = file_,
-                size = get_readable_file_size(ospath.getsize(up_path)),
-                name = download.name().replace('/', '')
-                url_path = rutils.quote(f'{name}')
-                share_url = f'{INDEX_URL}/{url_path}'
-                Fast Download link - share_url
+                size = get_readable_file_size(ospath.getsize(up_path))
             )
             if len(slit) > 1:
                 for rep in range(1, len(slit)):
